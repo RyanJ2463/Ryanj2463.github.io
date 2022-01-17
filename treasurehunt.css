@@ -1,0 +1,88 @@
+body {
+    background-image: url(https://cdn.pixabay.com/photo/2020/05/12/22/22/mar-5165146_1280.jpg);
+    background-position: center;
+    background-size: cover;
+    color: white;
+    background-attachment: fixed;
+    font-style: oblique;
+}
+h1 {
+    text-align: center;
+    color: black;
+}
+table {
+    margin: 0 auto;
+    border: 2px solid black;
+}
+.try-again{ /* . for class */
+    display: flex;
+    justify-content: center;
+}
+td {
+    border: 2px dotted black;
+    font-size: 100px;
+    height: 100px;
+    width: 100px;
+    text-align: center;
+    margin: 20px;
+}
+#treasure-pic{ /* # for id */
+    text-align: center;
+}
+h2{
+    text-align: center;
+}
+
+.container{
+    background-color: white;
+    border-radius: 8px;
+    opacity: .8;
+    color: black;
+    width: 30%;
+    margin: 0 auto;
+    padding: 8px 0;
+    margin-bottom: 15px;
+}
+.container-box{
+    background-color: white;
+    border-radius: 8px;
+    opacity: .8;
+    color: black;
+    width: 30%;
+    margin: 0 auto;
+    padding: 8px;
+    animation: shaking-effect 1s infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+}
+.list-group{
+    color: black;
+    display: flex;
+    align-items: center;
+}
+td:hover{
+    cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='43' height='52' viewport='0 0 100 100' style='fill:black;font-size:26px;'><text y='50%'>🍀</text></svg>") 16 0,auto; /*!emojicursor.app*/;
+}
+.end{
+    text-align: center;
+    background-color: white;
+    border-radius: 8px;
+    color: black;
+    width: 30%;
+    margin: 0 auto;
+    margin-top: 15px;
+    opacity: .8;
+}
+@keyframes shaking-effect {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+  }

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Treasure Hunt</title>
+        <link rel="stylesheet" href="treasurehunt.css">
+    </head>
+    <body>
+        <div class="container">
+            <h1 id='title' onclick="easterEgg()">Treasure Hunt</h1>
+            <!-- <div id="treasure-pic">
+                <img src="data:image/png;base64,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" alt="Treasure hunt" width="300px"/>
+            </div> -->
+            <h2>Instructions</h2>
+            <ul class="list-group">
+                <li>Click on the boxes to reveal what's on the map</li>
+                <li>If you click on the bomb, you lose</li>
+                <li>If you click on the rainbow, you win</li>
+            </ul>
+        </div>
+        <div class="try-again">
+            <button type="button" onclick="location.reload()">Try Again</button> 
+        </div>
+        <div class="counter">
+
+        </div>
+            <table class="container-box">
+                <tr>
+                    <td id = '0' onclick="treasure(0)">?</td>
+                    <td id = '1' onclick="treasure(1)">?</td>
+                    <td id = '2' onclick="treasure(2)">?</td>
+                    <td id = '3' onclick="treasure(3)">?</td>
+                </tr>
+                <tr>
+                    <td id = '4' onclick="treasure(4)">?</td>
+                    <td id = '5' onclick="treasure(5)">?</td>
+                    <td id = '6' onclick="treasure(6)">?</td>
+                    <td id = '7' onclick="treasure(7)">?</td>
+                </tr>
+                <tr>
+                    
+                    <td id = '8' onclick="treasure(8)">?</td>
+                    <td id = '9' onclick="treasure(9)">?</td>
+                    <td id = '10' onclick="treasure(10)">?</td>
+                    <td id = '11' onclick="treasure(11)">?</td>
+                </tr>
+                <tr>
+                    <td id = '12' onclick="treasure(12)">?</td>
+                    <td id = '13' onclick="treasure(13)">?</td>
+                    <td id = '14' onclick="treasure(14)">?</td>
+                    <td id = '15' onclick="treasure(15)">?</td>
+                </tr>
+                <tr>
+                    <td id = '16' onclick="treasure(16)">?</td>
+                    <td id = '17' onclick="treasure(17)">?</td>
+                    <td id = '18' onclick="treasure(18)">?</td>
+                    <td id = '19' onclick="treasure(19)">?</td>
+                </tr>
+            </table>
+        <div class="end">
+        <a href="https://www.techradar.com/news/gaming/the-most-successful-game-ever-a-history-of-minesweeper-596504"
+        target='_blank'>History of Minesweeper</a>
+    <footer>Ryan</footer>
+        </div>
+        <script 
+            type="text/javascript" src="TreasureHunt.js">
+        </script>
+</body>
+</html>
